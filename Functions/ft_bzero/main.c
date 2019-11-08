@@ -17,7 +17,7 @@ void ft_bzero(void *s, size_t n);
 
 int	main(void)
 {
-	char str[25] = "Prueba Wind";
+	char str[25] = "Definitiva Windows";
 	ft_bzero(str, 'p', 25);
 	printf("%s\n", str);
 	memset(str, 'p', 25);
