@@ -6,7 +6,7 @@ int main(void)
 {
         int a;
 
-        a = ft_isdigit('6');
+        a = ft_isdigit('8');
         printf( "%d\n", a);
 }
 
