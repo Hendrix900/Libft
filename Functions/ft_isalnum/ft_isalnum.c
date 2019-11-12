@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <ccastill@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:36:31 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/06 17:55:57 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/12 17:14:26 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (c >= 65 && c <= 90 || c >= 97 && c <= 122
 			|| c >= 48 && c <= 57)
