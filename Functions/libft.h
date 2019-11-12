@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:48:05 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/12 13:19:53 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/12 13:45:51 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,7 @@ int		ft_strncmp(const char *str1, const char *str2, unsigned int n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 #endif
+
+
+
+
