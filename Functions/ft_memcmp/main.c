@@ -17,10 +17,22 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 
 int	main(void)
 {
-	char src[25] = "casa";
-	char dest[25] = "patio";
-	ft_memcpy(dest, src, 3);
-	printf("%s\n", dest);
-	memcpy(dest, src, 3);
-	printf("%s\n", dest);
+   char str1[15] = "AAbB";
+   char str2[15] = "AABb";
+   int ret;
+
+   ret = ft_memcmp(str1, str2, 3);
+
+   if(ret > 0) 
+   {
+      printf("str2 es menor que str1\n");
+   } else if(ret < 0) 
+   {
+      printf("str1 es menor que str2\n");
+   } else 
+   {
+      printf("str1 es igual a str2\n");
+   }
+   
+   return(0);
 }

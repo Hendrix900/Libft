@@ -14,9 +14,10 @@
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *q;
-	unsigned char *p;
-	int l;
+
+	unsigned char	*q;
+	unsigned char	*p;
+	size_t l;
 
 	q = (unsigned char*)s1;
 	p = (unsigned char*)s2;
@@ -25,8 +26,10 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	if (n == 0)
 		return (0);
 
-	
-
-
-
+	while (*q == *p && ++l < n)
+	{
+		q++;
+		p++;
+	}
+	return ((int)(*q - *p));
 }
