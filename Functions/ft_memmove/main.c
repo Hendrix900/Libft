@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/08 13:18:50 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/12 17:26:49 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/08 13:18:58 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/12 17:26:46 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <string.h>
 
-void *memcpy(void *restricted dst, const void *restrict src, size_t n)
-{
-	unsigned char *q;
-	int l;
+void *ft_memmove(void *dest, const void *src, size_t n);
 
-	q = (unsigned char*)str;
-	l = 0;
-	while (n > 0)
-	{
-		q[l] = c;
-		l++;
-		n--;
-	}
-	return (str);
+int	main(void)
+{
+	char dest[25] = "DESTINO";
+	char src[25] = "ORIGEN";
+	
+	ft_memmove(dest, src, 2);
+	printf("%s\n", dest);
+	memmove(dest, src, 2);
+	printf("%s\n", dest);
 }

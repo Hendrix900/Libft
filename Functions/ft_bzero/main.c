@@ -18,8 +18,10 @@ void ft_bzero(void *s, size_t n);
 int	main(void)
 {
 	char str[40] = "Definitiva Windows";
-	ft_bzero(str, 'p', 25);
+	//ft_bzero(str, 5);
+	//printf("%s\n", str);
+	bzero(str, 5);
 	printf("%s\n", str);
-	memset(str, 'p', 25);
-	printf("%s\n", str);
+	printf("%s\n", str + 5);
+
 }

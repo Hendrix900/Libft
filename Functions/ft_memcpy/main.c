@@ -13,13 +13,14 @@
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memset(void *str, int c, size_t n);
+void *ft_memcpy(void *dest, const void *src, size_t n);
 
 int	main(void)
 {
-	char str[25] = "Hola que tal?";
-	ft_memset(str, 'p', 25);
-	printf("%s\n", str);
-	memcpy(str, 'p', 25);
-	printf("%s\n", str);
+	char src[25] = "SEBASTOPOL TIENE AL";
+	char dest[25] = "EURECA LO HE ADIVINADO";
+	ft_memcpy(dest, src, 15);
+	printf("%s\n", dest);
+	memcpy(dest, src, 15);
+	printf("%s\n", dest);
 }
