@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/13 14:06:46 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/13 14:06:46 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/13 17:22:20 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/13 17:22:20 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char *q;
-	unsigned char *p;
-	int l;
+	size_t l;
 
-	q = (unsigned char*)src;
-	p = (unsigned char*)dest;
+	q = (unsigned char*)s;
 	l = 0;
 	
-	while (n > 0)
-	{
-		p[l] = q[l];
-		l++;
-		n--;
-	}
+	while (++l <= n)
+		if (*(q++) == (unsigned char)c)
+			return ((void*)--q);
+	return (0);
 }

@@ -17,10 +17,10 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
 
 int	main(void)
 {
-	char src[25] = "SEBASTOPOL TIENE AL";
-	char dest[25] = "EURECA LO HE ADIVINADO";
-	ft_memcpy(dest, src, 15);
+	char src[25] = "casa";
+	char dest[25] = "patio";
+	ft_memcpy(dest, src, 3);
 	printf("%s\n", dest);
-	memcpy(dest, src, 15);
+	memcpy(dest, src, 3);
 	printf("%s\n", dest);
 }

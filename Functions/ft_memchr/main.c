@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/13 14:06:46 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/13 14:06:46 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/08 13:18:58 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/12 17:26:46 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <string.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
-{
-	unsigned char *q;
-	unsigned char *p;
-	int l;
+void *ft_memchr(const void *s, int c, size_t n);
 
-	q = (unsigned char*)src;
-	p = (unsigned char*)dest;
-	l = 0;
-	
-	while (n > 0)
-	{
-		p[l] = q[l];
-		l++;
-		n--;
-	}
+int	main(void)
+{
+	const char src[] = "www.origen.com";
+	const char ch = 'r';
+	char *ret;
+	char *fun;
+ 
+   ret = ft_memchr(src, ch, 20);
+   fun = ft_memchr(src, ch, 20);
+
+   printf("%s\n", ret);
+   printf("%s\n", fun);
+
+
+   return(0);
 }
