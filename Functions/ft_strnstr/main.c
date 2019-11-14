@@ -22,7 +22,7 @@ int main ()
    const char *s2 = "hola";
    char *ret;
 
-   ret = strlen(s1, s2, 1);
+   ret = strnstr(s1, s2, 1);
 
    printf("%s\n", ret);
    
