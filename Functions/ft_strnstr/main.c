@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:00:57 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/06 17:08:50 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/13 21:48:35 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/13 21:48:35 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+
+//char *ft_strnstr(const char	*s1, const char *s2, size_t n);
+
+int main () 
 {
-	size_t a;
+   const char *s1 = "hola";
+   const char *s2 = "hola";
+   char *ret;
 
-	a = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[a] != '\0' || s2[a] != '\0') && a < n)
-	{
-		if (s1[a] != s2[a])
-			return (s1[a] - s2[a]);
-		a++;
-	}
-	return (0);
+   ret = strlen(s1, s2, 1);
+
+   printf("%s\n", ret);
+   
+   return(0);
 }

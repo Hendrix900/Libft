@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 14:00:57 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/06 17:08:50 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/13 21:48:35 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/13 21:48:35 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <string.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	size_t a;
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
-	a = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[a] != '\0' || s2[a] != '\0') && a < n)
-	{
-		if (s1[a] != s2[a])
-			return (s1[a] - s2[a]);
-		a++;
-	}
-	return (0);
+int main () {
+   char str1[15];
+   char str2[15];
+   int ret;
+
+   strcpy(str1, "");
+   strcpy(str2, "");
+
+   ret = ft_strncmp(str1, str2, 4);
+
+   if(ret < 0) {
+      printf("str1 es menor que str2\n");
+   } else if(ret > 0) {
+      printf("str2 es menor que str1\n");
+   } else {
+      printf("str1 es igual que str2\n");
+   }
+   
+   return(0);
 }
