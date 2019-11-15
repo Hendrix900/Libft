@@ -6,16 +6,16 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 13:18:50 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/12 17:18:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/15 12:58:32 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *ft_memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	unsigned char *q;
-	int l;
+	unsigned char	*q;
+	int				l;
 
 	q = (unsigned char*)str;
 	l = 0;

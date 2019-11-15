@@ -6,18 +6,18 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 14:36:45 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/12 17:19:04 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/15 12:41:25 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *q;
-	q = (unsigned char*)s;
-	int l;
+	int				l;
+	unsigned char	*q;
 
+	q = (unsigned char*)s;
 	l = 0;
 	while (n > 0)
 	{

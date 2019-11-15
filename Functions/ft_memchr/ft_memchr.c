@@ -6,20 +6,19 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 17:22:20 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/13 17:22:20 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/15 12:48:13 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *q;
-	size_t l;
+	unsigned char	*q;
+	size_t			l;
 
 	q = (unsigned char*)s;
 	l = 0;
-	
 	while (++l <= n)
 		if (*(q++) == (unsigned char)c)
 			return ((void*)--q);

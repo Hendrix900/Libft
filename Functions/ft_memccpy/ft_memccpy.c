@@ -6,27 +6,26 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 14:43:07 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/13 14:43:07 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/15 12:47:09 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void *ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	unsigned char *q;
-	unsigned char *p;
-	size_t x;
+	unsigned char	*q;
+	unsigned char	*p;
+	size_t			x;
 
 	q = (unsigned char*)src;
 	p = (unsigned char*)dest;
 	x = 0;
-
 	while (x < n)
 	{
 		p[x] = q[x];
 		if (q[x] == (unsigned char)c)
-		return ((void*)p + x + 1);
+			return ((void*)p + x + 1);
 		x++;
 	}
 	return (NULL);

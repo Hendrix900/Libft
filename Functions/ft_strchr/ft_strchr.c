@@ -6,11 +6,11 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 21:47:37 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/13 21:47:37 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/15 12:59:57 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
