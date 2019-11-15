@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 14:06:46 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 13:26:55 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/15 13:53:09 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		l++;
 		n--;
 	}
+	return (dest);
 }
