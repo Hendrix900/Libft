@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:48:05 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 13:54:37 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/15 17:40:32 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcpy(char *dest, char *src, unsigned int size);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strnstr(const char	*s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
