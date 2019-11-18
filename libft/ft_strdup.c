@@ -6,11 +6,11 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 20:08:21 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/18 17:18:47 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/18 17:21:30 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {
