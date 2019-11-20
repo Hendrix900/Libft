@@ -10,14 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-
-char    *ft_strjoin(char const *s1, char const *s2)
-{
-    char            *srt;
-    unsigned int    i;
-    unsigned int    j;
+#include "libft.h"
 
   char    *ft_strjoin(char const *s1, char const *s2)
 {
@@ -29,7 +22,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
     j = 0;
     if (s1 == NULL || s2 == NULL)
         return (NULL);
-    srt = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+    srt = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
     if (srt == NULL)
         return (NULL);
     while (s1[j] != '\0')
