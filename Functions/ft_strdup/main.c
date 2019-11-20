@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/14 20:08:21 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/18 17:18:47 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/18 12:52:54 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/18 16:34:36 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <stdio.h>
+#include<string.h>
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(char *src);
+
+int main() 
 {
-	char	*new;
-	int		i;
-	int		size;
-
-	size = 0;
-	i = 0;
-	while (src[size])
-		size++;
-	new = malloc(sizeof(char) * (size + 1));
-	while (src[i])
-	{
-		new[i] = src[i];
-		i++;
-	}
-	new[i] = '\0';
-	return (new);
+   char *str = "Helloworld";
+   char *result;
+   result = ft_strdup(str);
+   printf("The string : %s\n", result);
+   return 0;
 }
