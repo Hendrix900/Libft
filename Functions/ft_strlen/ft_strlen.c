@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* La función strlen calcula la longitud de la cadena apuntada por (s)
+excluyendo el valor '\0' al final de la cadena */
+
 size_t	ft_strlen(const char *str)
 {
 	int c;
@@ -21,5 +24,5 @@ size_t	ft_strlen(const char *str)
 	{
 		c++;
 	}
-	return (c);
+	return (c); //Devuelve un int con la longitud de la cadena
 }

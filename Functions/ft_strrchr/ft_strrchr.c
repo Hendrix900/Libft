@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función strchr devuelve un puntero a la última coincidencia de (c)
+en la cadena (s) */
+
 char	*ft_strrchr(const char *str, int c)
 {
 	char	*end;

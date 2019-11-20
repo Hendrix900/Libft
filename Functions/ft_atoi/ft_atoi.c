@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función atoi transforma el valor "numérico" pasado como char en un int */
+
 int	ft_atoi(const char *str)
 {
 	int	conversion;
@@ -27,13 +29,13 @@ int	ft_atoi(const char *str)
 		else
 			break ;
 	}
-	if (str[l] == '-')
-		negative = -1;
+	if (str[l] == '-') //Si se da esta condición
+		negative = -1; //Transformamos negative en -1 para que el resultado final sea negativo
 	if (str[l] == '-' || str[l] == '+')
 		l++;
 	while (str[l] >= '0' && str[l] <= '9')
 	{
-		conversion = conversion * 10 + (str[l] - 48);
+		conversion = conversion * 10 + (str[l] - 48); //Transforma el char en int
 		l++;
 	}
 	return (conversion * negative);

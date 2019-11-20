@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* La función memccpy copia (n) bytes del área de memoria (src) 
+al área de memoria (dest), deteniendose cunado encuentra el caracter (c) */
+
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*q;

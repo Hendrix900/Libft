@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+
+/* Copia (n) bytes del área de memoria de (src) al área de (dest)
+El área de memoria puede solaparse */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

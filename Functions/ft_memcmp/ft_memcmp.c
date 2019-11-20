@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+
+/* La función memcmp compara los primeros (n) bytes 
+convertidos a unsigned char de las áreas de memoria s1 y s2 */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -22,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	p = (unsigned char*)s2;
 	l = 0;
 	if (n == 0)
-		return (0);
+		return (0); 
 	while (*q == *p && ++l < n)
 	{
 		q++;

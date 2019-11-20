@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+
+/* La función memchr escanea los (n) bytes iniciales 
+del área de memoria señalada por (s) hasta encontrar el caracter indicado por c */
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

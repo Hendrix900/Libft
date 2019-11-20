@@ -22,6 +22,5 @@ int	main(void)
 	//printf("%s\n", str);
 	bzero(str, 5);
 	printf("%s\n", str);
-	printf("%s\n", str + 5);
 
 }

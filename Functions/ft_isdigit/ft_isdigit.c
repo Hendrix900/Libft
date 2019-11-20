@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función isdigit revisa si el valor c es un valor numérico */
+
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{
-		return (1);
+		return (1); //Devuelve distinto de 0 si lo es
 	}
 	else
-		return (0);
+		return (0); //Devuelve 0 si no lo es
 }

@@ -23,6 +23,4 @@ int	main(void)
 	numero = ft_atoi(str);
 
 	printf("%d\n", numero);
-	
-
 }

@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* Copia el valor de (c) como unsigned char en los primeros (n) caracteres 
+de la cadena apuntada por (str) */
+
+#include "string.h"
 
 void	*ft_memset(void *str, int c, size_t n)
 {
@@ -25,5 +28,5 @@ void	*ft_memset(void *str, int c, size_t n)
 		l++;
 		n--;
 	}
-	return (str);
+	return (str); //Devuelve la cadena
 }

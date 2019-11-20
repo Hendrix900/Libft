@@ -17,11 +17,11 @@ void *ft_memmove(void *dest, const void *src, size_t n);
 
 int	main(void)
 {
-	char dest[25] = "";
-	char src[25] = "";
+	char dest[] = "Hola";
+	char src[] = "Pepsicola";
 	
-	ft_memmove(dest, src, 2);
+	ft_memmove(dest, src, 4);
 	printf("%s\n", dest);
-	memmove(dest, src, 2);
+	memmove(dest, src, 4);
 	printf("%s\n", dest);
 }

@@ -17,10 +17,10 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
 
 int	main(void)
 {
-	char src[25] = "casa";
-	char dest[25] = "patio";
-	ft_memcpy(dest, src, 3);
+	char src[] = "Hola";
+	char dest[] = "pepsicola";
+	ft_memcpy(dest, src, 2);
 	printf("%s\n", dest);
-	memcpy(dest, src, 3);
+	memcpy(dest, src, 2);
 	printf("%s\n", dest);
 }

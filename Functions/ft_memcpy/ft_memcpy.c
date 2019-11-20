@@ -10,7 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
+
+/* La función memcpy copia tantos (n) bytes de la cadena (src) a la cadena (dest)
+las áreas de memoria no deben solaparse */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -21,7 +24,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	q = (unsigned char*)src;
 	p = (unsigned char*)dest;
 	l = 0;
-	if (dest == '\0' && src == '\0')
+	if (dest == '\0' && src == '\0') //Si las cadenas están vacías devuelve '\0'
 		return (0);
 	while (n > 0)
 	{
@@ -29,5 +32,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		l++;
 		n--;
 	}
-	return (dest);
+	return (dest); //Devuelve la cadena de destino
 }

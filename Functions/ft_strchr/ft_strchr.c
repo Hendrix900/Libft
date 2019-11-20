@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función strchr devuelve un puntero a la primera coincidencia de (c)
+en la cadena (s) */
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función isascii revisa si el valor c está dentro de la tabla ascii */
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 	{
-		return (1);
+		return (1); //Devuelve distinto de 0 si lo es
 	}
 	else
-		return (0);
+		return (0); //Devuelve 0 si no lo es
 }

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función toupper convierte minúsculas y mayúsculas */
+
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
@@ -18,5 +20,6 @@ int	ft_toupper(int c)
 		return (c);
 	}
 	else
-		return (c);
+		return (c); //Si no hay minúsculas devuelve el valor que se ha pasado
+}
 }

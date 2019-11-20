@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función isprint revisa si el valor c es un carcter printable */
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
-		return (1);
+		return (1); //Devuelve distinto de 0 si lo es
 	}
 	else
-		return (0);
+		return (0); //Devuelve 0 si no lo es
 }

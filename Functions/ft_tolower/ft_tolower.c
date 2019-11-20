@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* La función tolower convierte mayúsculas en minúsculas */
+
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
@@ -18,5 +20,5 @@ int	ft_tolower(int c)
 		return (c);
 	}
 	else
-		return (c);
+		return (c); //Si no hay minúsculas devuelve el valor que se ha pasado
 }
