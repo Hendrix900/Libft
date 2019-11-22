@@ -5,29 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/08 13:18:58 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/12 17:26:46 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/20 22:01:20 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/20 22:01:20 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memchr(const void *s, int c, size_t n);
+char *ft_strtrim(char const *s1, char const *set);
 
-int	main(void)
+int main() 
 {
-	const char src[] = "www.origen.com";
-	const char ch = 'or';
-	char *ret;
-	char *fun;
- 
-   ret = ft_memchr(src, ch, 20);
-   fun = ft_memchr(src, ch, 20);
-
-   printf("%s\n", ret);
-   printf("%s\n", fun);
-
-
-   return(0);
+   char const *s1= "baHolaba";
+   char const *set= "b";
+   char *result;
+   result = ft_strtrim(s1, set);
+   printf("The string : %s\n", result);
+   return 0;
 }

@@ -16,10 +16,10 @@
 char *ft_strchr(const char *s, int c);
 
 int main () {
-	const char str[] = "hoca";
+	const char str[] = "ab.casa.ab";
   	char *ret;
 
-   	ret = ft_strchr(str, 'o');
+   	ret = ft_strchr(str, 'b');
 
    	printf("%s\n", ret);
    
