@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/20 22:10:04 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/25 15:16:09 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/25 17:02:10 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/25 17:18:22 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstnew(void *content)
 {
-	char	*ret;
+
+if (!(*char)malloc(sizeof(t_list))) * (content)
+
+content
+
+next -> NULL;
 
 
 
 }
+
