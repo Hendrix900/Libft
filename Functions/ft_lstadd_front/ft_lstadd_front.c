@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/25 17:02:10 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/25 17:02:28 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/26 13:16:37 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/26 13:16:37 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list ft_lstnew(void const *content);
-
+void ft_lstadd_front(t_list **alst, t_list *new)
+{
+if (alst && new)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
+}
