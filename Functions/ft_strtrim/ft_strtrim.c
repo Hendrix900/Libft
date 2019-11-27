@@ -45,7 +45,7 @@ size_t    cend(char const *s1, char const *set)
 	int        l;
 	count_e = 0;
 	len = ft_strlen(s1) - 1;
-	while (s1[len])
+	while (len > 0)
 	{
 		l = 0;
 		while (set[l] != '\0')
@@ -76,8 +76,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = cend(s1, set);
 	len = ft_strlen(s1);
 	l = 0;
-	new = malloc(sizeof(char) * (len - (start + end)) + 1);
-	if (new == 0)
+	if (start == len)
+        return (new = "");
+	if (!(new = (char*)malloc(sizeof(char) * (len - (start + end)) + 1)))
 		return (NULL);
 	while (start < len - end)
 		new[l++] = s1[start++];
