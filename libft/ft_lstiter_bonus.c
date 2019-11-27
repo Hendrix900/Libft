@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/25 17:02:10 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/25 17:18:22 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/27 23:56:57 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/27 23:56:57 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-
-if (!(*char)malloc(sizeof(t_list))) * (content)
-
-content
-
-next -> NULL;
-
 
 
 }
-

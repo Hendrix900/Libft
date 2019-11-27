@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/20 22:01:20 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/20 22:01:20 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/27 23:44:11 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/27 23:44:11 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
-char	**ft_split(char const *s, char c);
-
-int main() 
+t_list	*ft_lstnew(void *content)
 {
-   char const *s = "Holaquetal";
-   char **result = ft_split(s, 'q');
-   printf("%s\n", result);
-   return 0;
+
+	
 }
