@@ -6,10 +6,11 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 23:56:57 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/28 15:00:01 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/28 15:08:19 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
@@ -17,3 +18,4 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 
 
 }
+*/

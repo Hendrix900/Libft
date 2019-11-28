@@ -26,7 +26,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJS) libft.h
-	@gcc -c $(CFLAGS) $(FUN)
+	@gcc -c -I $(CFLAGS) $(FUN)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
 
@@ -36,7 +36,7 @@ bonus: $(OBJS_BONUS) libft.h
 	@ranlib $(NAME)
 
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	@rm -f $(NAME)

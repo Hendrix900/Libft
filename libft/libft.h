@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 12:48:05 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/28 14:58:13 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/28 15:35:14 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+					void (*del)(void *));
 t_list				*ft_lstnew(void *content);
 int					ft_lstsize(t_list *lst);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -53,7 +54,7 @@ char				**ft_split(char const *s, char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(char *src);
 char				*ft_strjoin(char const *s1, char const *s2);
-int					ft_strlcat(char *dst, const char *src, size_t size);
+size_t				ft_strlcat(char *dst, const char *src, size_t size);
 size_t				ft_strlcpy(char *dest, char *src, unsigned int size);
 size_t				ft_strlen(const char *str);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));

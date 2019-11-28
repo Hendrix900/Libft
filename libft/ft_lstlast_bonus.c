@@ -6,10 +6,11 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 23:53:00 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/28 15:00:24 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/28 15:09:12 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
@@ -17,3 +18,5 @@ t_list	*ft_lstlast(t_list *lst)
 
 
 }
+
+*/

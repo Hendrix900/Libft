@@ -6,10 +6,11 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 23:44:11 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/28 15:01:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/28 15:08:42 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
@@ -17,3 +18,4 @@ t_list	*ft_lstnew(void *content)
 
 
 }
+*/
