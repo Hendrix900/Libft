@@ -6,24 +6,24 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 23:51:08 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/27 23:51:08 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/28 15:02:21 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list *temp;
 
-	temp = *alst;
+	temp = *lst;
 
 	if (!temp)
-		*alst = new;
+		*lst = new;
 	else
 	{
 		while (temp->next)
 			temp = temp->next;
-			temp->next = new;
+		temp->next = new;
 	}
 }

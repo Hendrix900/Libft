@@ -6,17 +6,17 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 23:43:18 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/27 23:43:18 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/28 15:02:18 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-if (alst && new)
+	if (lst && new)
 	{
-		new->next = *alst;
-		*alst = new;
+		new->next = *lst;
+		*lst = new;
 	}
 }

@@ -6,18 +6,18 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 22:10:04 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/25 19:44:13 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/28 14:23:13 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-size_t    cstart(char const *s1, char const *set)
+size_t	cstart(char const *s1, char const *set)
 {
-	size_t    count_s;
-	int       q;
-	int       l;
+	size_t			count_s;
+	int				q;
+	int				l;
+
 	count_s = 0;
 	q = 0;
 	while (*s1)
@@ -28,7 +28,7 @@ size_t    cstart(char const *s1, char const *set)
 			if (set[l] == *s1)
 			{
 				count_s++;
-				break;
+				break ;
 			}
 			l++;
 		}
@@ -38,11 +38,13 @@ size_t    cstart(char const *s1, char const *set)
 	}
 	return (count_s);
 }
-size_t    cend(char const *s1, char const *set)
+
+size_t	cend(char const *s1, char const *set)
 {
-	size_t    count_e;
-	size_t    len;
-	int        l;
+	size_t		count_e;
+	size_t		len;
+	int			l;
+
 	count_e = 0;
 	len = ft_strlen(s1) - 1;
 	while (len > 0)
@@ -53,7 +55,7 @@ size_t    cend(char const *s1, char const *set)
 			if (set[l] == s1[len])
 			{
 				count_e++;
-				break;
+				break ;
 			}
 			l++;
 		}
@@ -63,6 +65,7 @@ size_t    cend(char const *s1, char const *set)
 	}
 	return (count_e);
 }
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*new;
@@ -70,6 +73,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	int		l;
 	size_t	len;
+
 	if (s1 == NULL || set == NULL)
 		return (NULL);
 	start = cstart(s1, set);
@@ -77,10 +81,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = ft_strlen(s1);
 	l = 0;
 	if (start == len)
-    {
-        new = ft_strdup("");
-        return (new);
-    }
+	{
+		new = ft_strdup("");
+		return (new);
+	}
 	if (!(new = (char*)malloc(sizeof(char) * (len - (start + end)) + 1)))
 		return (NULL);
 	while (start < len - end)
@@ -88,4 +92,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new[l] = '\0';
 	return (new);
 }
-
