@@ -6,11 +6,13 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:57:52 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 17:34:02 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/29 17:31:44 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	int				counter;
 	unsigned int	result;
