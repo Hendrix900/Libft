@@ -6,76 +6,70 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/22 17:22:38 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/22 17:22:38 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/29 13:32:27 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_count_fil(char const *s, char c)
+static char		**ft_mallocsize(char const *s, char c)
 {
-	int count;
+	char	*aux;
+	char	**aux2;
+	int		fil;
 
-	count = 0;
-	while (*s)
+	fil = 0;
+	aux = (char*)s;
+	while (*aux)
+	{
+		while (*aux == c)
+			aux++;
+		if (*aux != '\0')
+			fil++;
+		while (*aux != c && *aux)
+			aux++;
+	}
+	aux2 = (char**)malloc((fil + 1) * sizeof(char*));
+	if (aux2 == NULL)
+		return (NULL);
+	aux2[fil] = NULL;
+	return (aux2);
+}
+
+static char		**ft_copy(const char *s, char c)
+{
+	size_t	len;
+	char	**tab;
+	int		i;
+
+	i = 0;
+	len = 0;
+	tab = ft_mallocsize(s, c);
+	if (tab == NULL)
+		return (NULL);
+	while (*s != '\0')
 	{
 		while (*s == c)
 			s++;
 		if (*s != '\0')
-			count++;
-		while (*s != c && *s)
-			s++;
+		{
+			while (s[len] != c && s[len] != '\0')
+				len++;
+			tab[i++] = ft_substr(s, 0, len);
+			s += len;
+		}
+		len = 0;
 	}
-	return (count);
+	tab[i] = NULL;
+	return (tab);
 }
 
-static int	ft_count_colum(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	int	count;
-	int l;
+	char **tab;
 
-	l = 0;
-	count = 0;
-	while (s[l] && s[l] != c)
-	{
-		count++;
-		l++;
-	}
-	return (count);
-}
-
-char		**ft_cpbi(char **new, char const *s, char c, int fil)
-{
-	int l;
-	int q;
-
-	l = 0;
-	q = 0;
-	while (l < fil)
-	{
-		while (s[q] && s[q] == c)
-			q++;
-		new[l] = ft_substr(s, q, ft_count_colum(s + q, c));
-		while (s[q] && s[q] != c)
-			q++;
-		l++;
-	}
-	new[l] = NULL;
-	return (new);
-}
-
-char		**ft_split(char const *s, char c)
-{
-	char	**new;
-	int		fil;
-
-	if (!s || !c)
+	if (!s)
 		return (NULL);
-	fil = ft_count_fil(s, c);
-	new = (char**)malloc((fil + 1) * sizeof(char*));
-	if (new == NULL)
-		return (NULL);
-	new[fil] = NULL;
-	new = ft_cpbi(new, s, c, fil);
-	return (new);
+	tab = ft_copy(s, c);
+	return (tab);
 }

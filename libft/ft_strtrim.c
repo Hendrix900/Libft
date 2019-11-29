@@ -6,7 +6,7 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 22:10:04 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/28 14:23:13 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/29 13:41:26 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	cstart(char const *s1, char const *set)
 
 	count_s = 0;
 	q = 0;
-	while (*s1)
+	while (*s1 != '\0')
 	{
 		l = 0;
 		while (set[l] != '\0')
@@ -74,7 +74,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		l;
 	size_t	len;
 
-	if (s1 == NULL || set == NULL)
+	if (!s1 || !set)
 		return (NULL);
 	start = cstart(s1, set);
 	end = cend(s1, set);
@@ -85,7 +85,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		new = ft_strdup("");
 		return (new);
 	}
-	if (!(new = (char*)malloc(sizeof(char) * (len - (start + end)) + 1)))
+	new = malloc(sizeof(char) * (len - (start + end)) + 1);
+	if (new == 0)
 		return (NULL);
 	while (start < len - end)
 		new[l++] = s1[start++];

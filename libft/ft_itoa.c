@@ -6,68 +6,69 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 00:21:06 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/28 14:41:42 by ccastill         ###   ########.fr       */
+/*   Updated: 2019/11/29 13:52:29 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nbr_len(int nb)
+int		ft_count_nb(int nb)
 {
-	int	i;
+	int				count;
+	unsigned int	c;
 
-	i = 1;
+	c = 0;
+	count = 0;
 	if (nb < 0)
 	{
-		i++;
-		nb *= -1;
+		c = nb * -1;
+		count++;
 	}
-	while (nb > 9)
+	if (nb > 0)
+		c = nb;
+	while (c >= 10)
 	{
-		nb /= 10;
-		i++;
+		c = c / 10;
+		count++;
 	}
-	return (i);
+	if (c < 10)
+		count++;
+	return (count);
 }
 
-static int	ft_div(int len)
+void	ft_putnum(char *s, int n, int l)
 {
-	int	i;
+	unsigned int c;
 
-	i = 1;
-	if (len == 1)
-		return (1);
-	while (len > 1)
-	{
-		i *= 10;
-		len--;
-	}
-	return (i);
-}
-
-char		*ft_itoa(int n)
-{
-	int		i;
-	int		len;
-	int		len2;
-	char	*result;
-
-	i = 0;
-	len = ft_nbr_len(n);
-	len2 = len;
-	if ((result = (char*)malloc(sizeof(char) * (len + 1))) == NULL)
-		return (NULL);
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
+	c = 0;
+	s[l--] = '\0';
+	if (n == 0)
+		s[0] = '0';
 	if (n < 0)
 	{
-		n *= -1;
-		result[0] = '-';
-		i++;
-		len--;
+		s[0] = '-';
+		c = n * -1;
 	}
-	while (i < len2)
-		result[i++] = ((n / ft_div(len--)) % 10) + 48;
-	result[i] = '\0';
-	return (result);
+	if (n > 0)
+		c = n;
+	while (c > 10 || (c <= 10 && c != 0))
+	{
+		s[l--] = c % 10 + 48;
+		c = c / 10;
+	}
+}
+
+char	*ft_itoa(int n)
+{
+	char	*new;
+	int		l;
+
+	if (n < -2147483648)
+		return (NULL);
+	l = ft_count_nb(n);
+	new = (char*)malloc(sizeof(char) * l + 1);
+	if (new == 0)
+		return (NULL);
+	ft_putnum(new, n, l);
+	return (new);
 }
