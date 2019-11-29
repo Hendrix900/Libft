@@ -10,13 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list *aux;
+	t_list *tmp;
 
-
-
-
+	aux = *lst;
+	while (aux)
+	{
+		tmp = aux;
+		del(aux->content);
+		aux = aux->next;
+		free(tmp);
+	}
+	*lst = NULL;
 }
-*/

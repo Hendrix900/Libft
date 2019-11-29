@@ -19,12 +19,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	size;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	count = 0;
 	size = ft_strlen(s + start);
 	if (size < len)
 		len = size;
-	str = malloc((len + 1) * sizeof(char));
+	str = (char*)malloc((len + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	if (start > ft_strlen(s))
