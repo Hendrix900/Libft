@@ -6,24 +6,24 @@
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 22:16:49 by ccastill          #+#    #+#             */
-/*   Updated: 2019/12/04 16:49:50 by carlos           ###   ########.fr       */
+/*   Updated: 2019/12/04 17:33:30 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	const char	*end;
+	const char *last_pos;
 
-	end = 0;
-	while (*str)
+	last_pos = NULL;
+	while (*s != '\0')
 	{
-		if (*str == c)
-			end = (char*)str;
-		++str;
+		if (*s == c)
+			last_pos = s;
+		s++;
 	}
-	if (end)
-		return (end);
+	if (last_pos)
+		return ((char*)last_pos);
 	if (c == '\0')
-		return ((char*)str);
-	return (0);
+		return ((char*)s);
+	return (NULL);
 }
