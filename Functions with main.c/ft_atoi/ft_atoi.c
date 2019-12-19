@@ -23,6 +23,7 @@ int	ft_atoi(const char *str) // La función devolverá un entero y recogerá un 
 	/* Inicializamos todos los enteros a 0, salvo el negative que lo dejaremos en 1. 
 	Al multiplicar todo número por 1 obtenemos el mísmo número. Esta operación la veremos más adelante 
 	y nos permitirá transformar el caso de un posible negativo */
+
 	l = 0;
 	conversion = 0;
 	negative = 1; 
@@ -70,5 +71,6 @@ int	ft_atoi(const char *str) // La función devolverá un entero y recogerá un 
 	}
 	/* Para finalizar devolveremos un entero que será el resultado de multiplicar conversión, que será nuestro número ya convertido a Int por el negativo, que
 	dependiendo de si en la cadena había un - será un 1 o un -1.*/
+	
 	return (conversion * negative);
 }
