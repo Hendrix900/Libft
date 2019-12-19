@@ -22,7 +22,7 @@ int main ()
 
 	new = ft_atoi(str); // Metemos en new el entero que devuelve la función ft_atoi tras convertir la cadena str.
 
-	printf("La cadena char es %s\n", str); // sacame por pantalla la cadena de caracteres antes de la conversión.
+	printf("La cadena char es %s\n", str); // Sácame por pantalla la cadena de caracteres antes de la conversión.
 	printf("La cadena transformada en int es %d\n", new); // Sácame por pantalla el int generado tras la conversión aplicada por la función.
 
 	return (0);
