@@ -10,15 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include <string.h> //Incluimos la librería en la que se encuentre la estructura size_t que utilizaremos en la función.
 
-/*La función bzero borra tantos bytes de la memoria indicados por (n) añadiendo '\0'
-a la localización apuntada por s */ 
+/*La función bzero borra tantos bytes de la memoria como el número indicado por (n) añadiendo '\0'
+a la localización de la cadena apuntada por s */ 
 
 void	ft_bzero(void *s, size_t n)
 {
-	int				l;
-	unsigned char	*q;
+	int				l; // El contador de la cadena.
+	unsigned char	*q; // inicializamos una variable del tipo unsigned char ya que sólo queremos que nos recoja el tipo char sin signo.
+						// En caso de que nos manden una cadena de enteros, estos se transformarán a valores char de la tabla ASCII.
 
 	q = (unsigned char*)s; //Casteo, conversión de s a unsigned char, e introducción del valor en q
 	l = 0;

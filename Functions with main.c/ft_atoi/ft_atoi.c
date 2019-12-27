@@ -45,7 +45,7 @@ int	ft_atoi(const char *str) // La función devolverá un entero y recogerá un 
 		else
 			break ; // Sal del bucle.
 	}
-	if (str[l] == '-') //Si en el recorrido de la cadena se encuentra un - sabremos que es un número negativo por ello
+	if (str[l] == '-') //Si en el recorrido de la cadena se encuentra un - sabremos que es un número negativo, por ello
 		negative = -1; //Transformamos negative en -1 para que el resultado final sea negativo.
 	if (str[l] == '-' || str[l] == '+') // Del mismo modo, si se encuentra un - o un + queremos que siga avanzando por la cadena.
 		l++;
