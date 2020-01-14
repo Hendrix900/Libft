@@ -10,15 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdio.h> // Incluimos la librería que nos permita llamar a la función printf.
 
-int ft_isalnum(int c);
+
+int ft_isalnum(int c); //Prototipo de la función que voy a llamar
 
 int main(void)
 {
-         int a;
+        int a;
 
-        a = ft_isalnum('?');
+        a = ft_isalnum(53);
         printf( "%d\n", a);
 }
 

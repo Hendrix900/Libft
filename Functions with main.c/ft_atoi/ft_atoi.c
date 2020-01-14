@@ -52,7 +52,7 @@ int	ft_atoi(const char *str) // La función devolverá un entero y recogerá un 
 	while (str[l] >= '0' && str[l] <= '9') // Si lo que se encuentra está comprendido entre el 0 y el 9, procederemos a realizar la conversión del char al int.
 	{
 		/*La sigueinte operación transformará el char en int.
-		Para ello utilizaremos el entero conversión que comienza siendo 0 para que al multiplicarlo por 10 nos de el número que sea conversión en cada momento.
+		Para ello utilizaremos el entero "conversion" que comienza siendo 0 para que al multiplicarlo por 10 nos de el número que sea "conversión" en cada momento.
 		A este número le sumamos el resultado de restar el char de la cadena (Que siempre es un número de la tabla ASCII) por 48, que representa el 0 en ASCII,
 		por lo que el resultado siempre será el mismo número que queremos convertir.*/
 

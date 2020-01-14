@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 19:39:31 by ccastill          #+#    #+#             */
-/*   Updated: 2020/01/14 19:39:31 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/08 14:36:45 by ccastill          #+#    #+#             */
+/*   Updated: 2019/12/05 17:21:03 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <string.h> 
 
-int ft_isdigit(int c);
+/*Introducimos la función ft_bzero debido a que la utilizamos en ft_calloc, y es requerida a la hora de compilar.
+Para conocer el funcionamiento de esta función acudir a la función originaria*/
 
-int main(void)
+void	ft_bzero(void *s, size_t n)
 {
-        int a;
-
-        a = ft_isdigit('8');
-        printf( "%d\n", a);
+	int				l; 
+	unsigned char	*q; 
+	
+	q = (unsigned char*)s; 
+	l = 0;
+	while (n > 0)
+	{
+		q[l] = 0;
+		l++;
+		n--;
+	}
 }
-
-

@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h> // Incluimos la librería que nos permita llamar a la función printf.
 
 void ft_bzero(void *s, size_t n); // Prototipo de la función a la que vamos a llamar en el main.
 
