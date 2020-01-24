@@ -13,7 +13,7 @@
 #include <string.h> 
 
 /*Introducimos la función ft_bzero debido a que la utilizamos en ft_calloc, y es requerida a la hora de compilar.
-Para conocer el funcionamiento de esta función acudir a la función originaria*/
+Para conocer el funcionamiento de esta función acudir a la función original*/
 
 void	ft_bzero(void *s, size_t n)
 {
