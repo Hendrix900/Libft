@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* La función toupper convierte minúsculas y mayúsculas */
+/* La función toupper convierte minúsculas en mayúsculas */
 
 int	ft_toupper(int c)
 {
