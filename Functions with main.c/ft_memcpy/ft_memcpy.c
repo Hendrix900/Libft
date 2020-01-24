@@ -12,12 +12,12 @@
 
 #include <string.h>
 
-/* La función memcpy copia tantos (n) bytes de la cadena (src) a la cadena (dest)
-las áreas de memoria no deben solaparse */
+/* La función memcpy copia tantos (n) bytes de la cadena (src) a la cadena (dest).
+Las áreas de memoria no deben solaparse */
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*q;
+	unsigned char	*q; 
 	unsigned char	*p;
 	int				l;
 
@@ -26,11 +26,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	l = 0;
 	if (dest == '\0' && src == '\0') //Si las cadenas están vacías devuelve '\0'
 		return (0);
-	while (n > 0)
+	while (n > 0) // Creamos un bucle donde vamos a ir metiendo lo que está en q en p.
 	{
 		p[l] = q[l];
 		l++;
 		n--;
 	}
-	return (dest); //Devuelve la cadena de destino
+	return (dest); //Devuelve un puntero a la cadena de destino
 }

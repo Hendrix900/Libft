@@ -20,7 +20,7 @@ int	main(void)
 	char dest[25] = "DESTINO";
 	char src[25] = "ORIGEN";
 	
-	ft_memccpy(dest, src, 'O', 2);
+	ft_memccpy(dest, src, 'O', );
 	printf("%s\n", dest);
 	memccpy(dest, src, 'O', 2);
 	printf("%s\n", dest);

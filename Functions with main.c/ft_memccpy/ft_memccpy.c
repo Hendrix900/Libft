@@ -13,7 +13,8 @@
 #include "libft.h"
 
 /* La función memccpy copia (n) bytes del área de memoria (src) 
-al área de memoria (dest), deteniendose cuando encuentra el caracter (c) */
+al área de memoria (dest), deteniendose cuando encuentra el caracter (c) 
+Si las areas de memoria se solapan, el resultado es indefinido. */
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

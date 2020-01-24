@@ -22,20 +22,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	l = (unsigned char*)dest;
 	q = (unsigned char*)src;
-	if ((void*)l == NULL && (void*)q == NULL)
+	if ((void*)l == NULL && (void*)q == NULL) // Nos aseguramos de que si nos envían vacias las cadenas no devuelva NULL.
 		return (NULL);
-	if (l < q)
+	if (l < q) // Mientras la cadena de destino sea menor que origen.
 	{
-		while (n--)
+		while (n--) // Vas introducciendo q en l. 
 		{
 			*(l++) = *(q++);
 		}
 		return (dest);
 	}
-	else
+	else // en caso de que ambas cadenas sean iguales o l sea más larga.
 	{
-		while (n--)
+		while (n--) // vas metiendo q en l.
 			l[n] = q[n];
 	}
-	return (dest);
+	return (dest); //Devuelve un puntero a la cadena de destino
 }
