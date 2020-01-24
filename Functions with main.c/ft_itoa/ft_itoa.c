@@ -10,64 +10,78 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h> 
+#include <stdlib.h> /* Incluimos esta librería para poder utilizar la función malloc */
 
-static int    ft_nbr_len(int nb)
+/* La función ft_itoa convierte un entero a una cadena de caracteres.
+
+
+/* La función ft_itoa se compone de 3 funciones. Siendo el orden de lectura del programa el siguiente: 
+char   *ft_itoa(int n)
+int		ft_count_nb(int nb)
+void	ft_putnum(char *s, int n, int l)
+*/
+
+/* Esta función nos permitirá  */
+
+int		ft_count_nb(int nb)
 {
-    int i;
+	int				count;
+	unsigned int	c;
 
-    i = 1;
-    if (nb < 0)
-    {
-        i++;
-        nb *= -1;
-    }
-    while (nb > 9)
-    {
-        nb /= 10;
-        i++;
-    }
-    return (i);
+	c = 0;
+	count = 0;
+	if (nb < 0)
+	{
+		c = nb * -1;
+		count++;
+	}
+	if (nb > 0)
+		c = nb;
+	while (c >= 10)
+	{
+		c = c / 10;
+		count++;
+	}
+	if (c < 10)
+		count++;
+	return (count);
 }
 
-static int    ft_div(int len)
+void	ft_putnum(char *s, int n, int l)
 {
-    int i;
+	unsigned int c;
 
-    i = 1;
-    if (len == 1)
-        return (1);
-    while (len > 1)
-    {
-        i *= 10;
-        len--;
-    }
-    return (i);
+	c = 0;
+	s[l--] = '\0';
+	if (n == 0)
+		s[0] = '0';
+	if (n < 0)
+	{
+		s[0] = '-';
+		c = n * -1;
+	}
+	if (n > 0)
+		c = n;
+	while (c > 10 || (c <= 10 && c != 0))
+	{
+		s[l--] = c % 10 + 48;
+		c = c / 10;
+	}
 }
 
-char        *ft_itoa(int n)
+/* Esta será la función principal. Recogerá un int y devovlerá un char *. */ 
+char	*ft_itoa(int n)
 {
-    int        i;
-    int        len;
-    int        len2;
-    char    *result;
+	char	*new; // Creamos una nueva cadena que se encargará de recoger el valor que devolveremos.
+	int		l; // Creamos un entero que nos servirá para guardar el resultado de la función ft_count_nb. 
 
-    i = 0;
-    len = ft_nbr_len(n);
-    len2 = len;
-    if ((result = (char*)malloc(sizeof(char) * (len + 1))) == NULL)
-        return (NULL);
-
-    if (n < 0)
-    {
-        n *= -1;
-        result[0] = '-';
-        i++;
-        len--;
-    }
-    while (i < len2)
-        result[i++] = ((n / ft_div(len--)) % 10) + 48;
-    result[i] = '\0';
-    return (result);
+	if (n < -2147483648) // Con esta condición nos aseguramos que si el valor que nos pase se encuentre dentro del rango que acepta el int.
+		return (NULL); // Si nos pasan algo inferior a ese rango, nos devolverá NULL.
+	l = ft_count_nb(n); // Introducimos en l el valor devuelto por ft_count_nb
+	new = (char*)malloc(sizeof(char) * l + 1);
+	if (new == 0)
+		return (NULL);
+	ft_putnum(new, n, l);
+	return (new);
 }
