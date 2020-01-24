@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/13 14:43:07 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 13:26:46 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/27 23:53:20 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/28 15:08:36 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* La función memccpy copia (n) bytes del área de memoria (src) 
-al área de memoria (dest), deteniendose cuando encuentra el caracter (c) */
-
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned char	*q;
-	unsigned char	*p;
-	size_t			x;
+	t_list *new;
+	t_list *aux;
 
-	q = (unsigned char*)src;
-	p = (unsigned char*)dest;
-	x = 0;
-	while (x < n)
+	if (!lst)
+		return (NULL);
+	aux = ft_lstnew(f(lst->content));
+	new = aux;
+	while (lst->next != NULL)
 	{
-		p[x] = q[x];
-		if (q[x] == (unsigned char)c)
-			return ((void*)p + x + 1);
-		x++;
+		lst = lst->next;
+		if (!(aux->next = ft_lstnew(f(lst->content))))
+		{
+			del(aux->next);
+			free(aux->next);
+			return (NULL);
+		}
+		aux = aux->next;
 	}
-	return (NULL);
+	return (new);
 }

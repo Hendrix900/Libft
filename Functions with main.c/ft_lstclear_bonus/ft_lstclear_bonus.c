@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/13 14:43:07 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 13:26:46 by ccastill         ###   ########.fr       */
+/*   Created: 2019/11/27 23:52:00 by ccastill          #+#    #+#             */
+/*   Updated: 2019/11/28 15:07:55 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* La función memccpy copia (n) bytes del área de memoria (src) 
-al área de memoria (dest), deteniendose cuando encuentra el caracter (c) */
-
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	unsigned char	*q;
-	unsigned char	*p;
-	size_t			x;
+	t_list *aux;
+	t_list *tmp;
 
-	q = (unsigned char*)src;
-	p = (unsigned char*)dest;
-	x = 0;
-	while (x < n)
+	aux = *lst;
+	while (aux)
 	{
-		p[x] = q[x];
-		if (q[x] == (unsigned char)c)
-			return ((void*)p + x + 1);
-		x++;
+		tmp = aux;
+		del(aux->content);
+		aux = aux->next;
+		free(tmp);
 	}
-	return (NULL);
+	*lst = NULL;
 }
