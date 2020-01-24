@@ -17,9 +17,9 @@ void *ft_memset(void *str, int c, size_t n);
 
 int	main(void)
 {
-	char str[25] = "Hola que tal?";
-	ft_memset(str, 'K', 5);
-	printf("%s\n", str);
-	memset(str, 'p', 25);
-	printf("%s\n", str);
+	char cadena[] = "Hola que tal?";
+	ft_memset(cadena, 'K', 5);
+	printf("%s\n", cadena);
+	memset(cadena, 'p', 13);
+	printf("%s\n", cadena);
 }

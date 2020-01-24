@@ -13,14 +13,14 @@
 /* Copia el valor de (c) como unsigned char en los primeros (n) caracteres 
 de la cadena apuntada por (str) */
 
-#include "string.h"
+#include "string.h" // Necesitamos incluir esta librería por utilizar el tipo size_t
 
 void	*ft_memset(void *str, int c, size_t n)
 {
 	unsigned char	*q;
 	int				l;
 
-	q = (unsigned char*)str;
+	q = (unsigned char*)str; // Realizamos un casteo a unsigned char
 	l = 0;
 	while (n > 0)
 	{
@@ -28,5 +28,5 @@ void	*ft_memset(void *str, int c, size_t n)
 		l++;
 		n--;
 	}
-	return (str); //Devuelve la cadena
+	return (str); //Devuelve un puntero a la cadena apuntada por str.
 }
