@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:00:57 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 17:45:09 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/25 05:57:01 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* La función strncmp compara el número de bytes indicado por (n) 
+de las áreas de memoria s1 y s2, y devuelve la diferencia
+entre los primeros caracteres distintos encontrados.*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

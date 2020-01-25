@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 13:18:58 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/12 17:26:46 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/25 03:56:31 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void *ft_memchr(const void *s, int c, size_t n);
 int	main(void)
 {
 	const char src[] = "www.origen.com";
-	const char ch = 'or';
+	const char ch = 'r';
 	char *ret;
 	char *fun;
  

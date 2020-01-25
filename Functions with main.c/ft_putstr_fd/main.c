@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/13 22:16:49 by ccastill          #+#    #+#             */
-/*   Updated: 2020/01/25 05:16:50 by carlos           ###   ########.fr       */
+/*   Created: 2020/01/25 06:41:56 by carlos            #+#    #+#             */
+/*   Updated: 2020/01/25 07:20:36 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putstr_fd(char *s, int fd);
+
+int main()
 {
-	const char *last_pos;
 
-	last_pos = NULL;
-	while (*s != '\0')
-	{
-		if (*s == c) 
-			last_pos = s;
-		s++;
-	}
-	if (last_pos)
-		return ((char*)last_pos);
-	if (c == '\0')
-		return ((char*)s);
-	return (NULL);
+char c[] = "hola que ase";
+
+ft_putstr_fd(c, 1);
+
+return (0);
 }

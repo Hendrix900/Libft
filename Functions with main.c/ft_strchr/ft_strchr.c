@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 21:47:37 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 12:59:57 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/25 05:04:07 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == c)
-			return ((char*)s);
+			return ((char*)s); // La función devuelve un char * por lo que casteamos s.
 		++s;
 	}
-	if (c == '\0')
+	if (c == '\0') // En caso de que llegue al final de la cadena, que devuelva toda la cadena.
 		return ((char*)s);
 	return (0);
 }

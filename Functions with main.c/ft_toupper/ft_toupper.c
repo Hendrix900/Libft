@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:02:50 by ccastill          #+#    #+#             */
-/*   Updated: 2019/12/05 17:30:43 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/25 04:23:54 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 	{
-		c = c - 32;
+		c = c - 32; // Se resta para convertir en mayúsculas.
 		return (c);
 	}
 	else

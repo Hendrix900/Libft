@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 17:22:20 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 13:26:50 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/25 03:54:29 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	q = (unsigned char*)s;
 	l = 0;
-	while (++l <= n)
-		if (*(q++) == (unsigned char)c)
-			return ((void*)--q);
-	return (0);
+	while (++l <= n) //Creamos un bucle para avanzar por la cadena.
+		if (*(q++) == (unsigned char)c) // Si q es igual a c.
+			return ((void*)--q); // Devuelve un puntero a la dirección de de q, menos una posición.
+	return (0); // En los demás casos devolverá NULL
 }

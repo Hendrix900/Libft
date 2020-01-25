@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/21 15:51:46 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/21 15:58:47 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/25 07:27:34 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+void	ft_putchar_fd(char c, int fd);
+
+/* Imprime en formato cadena el numero entero pasado por el file descriptor que se le indique */
 
 void	ft_putnbr_fd(int n, int fd)
 {
