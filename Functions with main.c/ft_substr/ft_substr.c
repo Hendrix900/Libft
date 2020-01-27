@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr copy.c                                   :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 19:03:04 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/21 14:53:03 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:33:11 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdlib.h> 
 
 /* La función ft_substr devuelve la cadena (s) empezando desde la posición
 indicada por (start) y con el número de caracteres indicado por (len) */
+
+size_t	ft_strlen(const char *str);
+
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -24,7 +32,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (0);
 	count = 0;
-	size = ft_strlen(s + start); /* cadena s + empezar en la posición de start */
+	size = ft_strlen(s + start); /* Mide la cadena s empezando desde la posición start, y el resultado (entero) lo introduce en size. */
 	if (size < len)
 		len = size;
 	str = malloc((len + 1) * sizeof(char));

@@ -6,13 +6,15 @@
 /*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 13:59:09 by ccastill          #+#    #+#             */
-/*   Updated: 2020/01/27 15:31:00 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/27 15:32:44 by ccastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 /* La función strlen calcula la longitud de la cadena apuntada por (s)
 excluyendo el valor '\0' al final de la cadena */
+#include <stdio.h>
+#include <stddef.h>
+#include <stdint.h>
 
 size_t	ft_strlen(const char *str)
 {
