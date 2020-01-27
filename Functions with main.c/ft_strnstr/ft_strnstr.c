@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/14 10:47:33 by ccastill          #+#    #+#             */
-/*   Updated: 2019/11/15 17:37:36 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/01/27 22:23:52 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+
+/* Devuelve la cadena desde la posicion de la palabra que le mandes, compara la cadena con esa palabra
+ y si conincide en tantos caracteres mandados devuelve la cadena desde esa posicion */
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
