@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	q = (unsigned char*)s1;
 	p = (unsigned char*)s2;
 	l = 0;
-	if (n == 0) // Protección, en caso de que se pase 0 en n nos devolverá NUL
+	if (n == 0) // Protección, en caso de que se pase 0 en n nos devolverá NULL
 		return (0); 
 	while (*q == *p && ++l < n) // Avanza siempre que los caractres encontrados coincida.
 	{

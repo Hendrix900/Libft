@@ -12,6 +12,10 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
+size_t	ft_strlen(const char *str);
+char	*ft_strdup(const char *src);
 
 size_t    cstart(char const *s1, char const *set)
 {

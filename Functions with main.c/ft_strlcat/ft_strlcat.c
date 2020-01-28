@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-/* La función ft_strlcat concatena dos cadenas  */ 
+/* La función ft_strlcat concatena dos cadenas, devuelve el tamaño de la cadena que ha intentado crear */ 
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

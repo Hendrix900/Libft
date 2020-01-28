@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Devuelve el tamaño de la cadena original, al intentar copiar y conccatenar dos cadenas */
+
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	int				counter;
