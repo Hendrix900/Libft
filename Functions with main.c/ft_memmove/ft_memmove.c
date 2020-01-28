@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	q = (unsigned char*)src;
 	if ((void*)l == NULL && (void*)q == NULL) // Nos aseguramos de que si nos envían vacias las cadenas no devuelva NULL.
 		return (NULL);
-	if (l < q) // Mientras la cadena de destino sea menor que origen.
+	if (l < q) // Si la cadena de destino sea menor que origen entra.
 	{
 		while (n--) // Vas introducciendo q en l. 
 		{
