@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccastill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: carlos <carlos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 21:07:06 by ccastill          #+#    #+#             */
-/*   Updated: 2020/01/27 15:37:57 by ccastill         ###   ########.fr       */
+/*   Updated: 2020/04/22 01:21:31 by carlos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main()
    char *result;
    int a;
    
-   result = ft_substr(s, 3, 6);
+   result = ft_substr(s, 3, 10);
    a = ft_strlen(s);
    printf("The string : %s\n", result);
    printf("La longitud de la cadena es : %d\n", a);
